@@ -25,7 +25,7 @@ const CodeView = (props) => {
                         lines.map((line) => <span className="minispan" key={line}> {line} </span>)
                     }
                 </span>
-                <TextareaAutosize value={code} onChange={onCodeChange} className="noStyleTextArea"/>
+                <TextareaAutosize spellCheck="false" value={code} onChange={onCodeChange} className="noStyleTextArea"/>
                 <span className="cl"></span>
             </div>
             <button className="codeButton" >Copy</button>
