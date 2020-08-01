@@ -1,38 +1,89 @@
-.App {
-  text-align: center;
-}
+.codeArea {
+  background: #f4f4f4;
+  border: 1px solid #ddd;
+  border-left: 3px solid #f36d33;
+  color: #666;
+  page-break-inside: avoid;
+  font: normal normal 14px/16px "Courier New",Courier,Monospace;
+  line-height: 1.0;
+  margin-bottom: 1.6em;
+  max-width: 100%;
+  padding: .5em 1em;
+  display: block;
+  word-wrap: break-word;
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+  margin-left: 30px;
+  overflow: auto;
+  overflow-x: auto;
+  white-space: pre-wrap;
+  counter-reset: line;
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.codeArea:hover,
+.codeArea:focus {
+  /* what ever action */
+  /* this is just example */
+  border-left: 3px solid #338df3;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+div.code
+{
+position: relative;
+}
+
+.codeArea + button
+{
+position: absolute;
+top: 0;
+right: 0;
+}
+
+.codeArea .line-number {
+  float: left;
+  margin: 0 1em 0 -1em;
+  border-right: 1px solid;
+  text-align: right;
+}
+
+.codeArea .line-number span {
+  display: block;
+  padding: 0 .5em 0 1em;
+}
+
+.codeArea .cl {
+  display: block;
+  clear: both;
+}
+
+.noStyleTextArea {
+  border: none;
+  background: none;
+  box-sizing:border-box;
+  -moz-box-sizing:border-box;
+  height: 100px;
+  width: 100%;
+}
+
+.codeButton {
+  background-color: transparent;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  border-radius: 2x;
+  border: 1px solid;
+  display: inline-block;
+  cursor: pointer;
+  color: #000;
+  font-family: Arial;
+  font-size: 14px;
+  padding: 2px 2px;
+  text-decoration: none;
+  margin: 2px 2px;
+}
+.codeButton:hover  {
+  background-color: transparent;
+}
+.codeButton:active {
+top: 1px;
 }
