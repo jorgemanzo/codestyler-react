@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import TextareaAutosize from 'react-textarea-autosize';
+import {CopyToClipboard} from 'react-copy-to-clipboard';
 const CodeView = (props) => {
     let [code, setCode] = useState('')
     let [lines, setLines] = useState([1])
@@ -28,7 +29,9 @@ const CodeView = (props) => {
                 <TextareaAutosize spellCheck="false" value={code} onChange={onCodeChange} className="noStyleTextArea"/>
                 <span className="cl"></span>
             </div>
-            <button className="codeButton" >Copy</button>
+            <CopyToClipboard text={code}>
+                <button className="codeButton" >Copy</button>
+            </CopyToClipboard>
         </div>
     )
 }
